@@ -95,7 +95,8 @@ def train_model(training_data, model=False):
     #model.fit({'input': X}, {'targets': y}, n_epoch=3, snapshot_step=500, show_metric=True, run_id='openai_learning')
     return model
 
-training_data = initial_population()
+#training_data = initial_population()
+training_data = np.load('saved.npy')
 model = train_model(training_data)
 
 scores = []
